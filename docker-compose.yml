@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  db:
+    image: mysql:8
+    ports:
+      - "3306:3306"
+    restart: always
+    volumes:
+      - db-data:/var/lib/mysql
+    command: --default-authentication-plugin=mysql_native_password
+
+  nginx:
+    build:
+      context: .
+      dockerfile: ./docker/nginx.Dockerfile
+    depends_on:
+      - web
+    ports:
+      - "8080:80"
+
+  web:
+    build:
+      context: .
+      dockerfile: ./docker/php.Dockerfile
+    depends_on:
+      - db
+    expose:
+      - "9000"
+
+volumes:
+  db-data:

@@ -1,0 +1,61 @@
+.btn-neutral {
+  border: 0 unset;
+  background-color: unset;
+  box-shadow: unset;
+}
+
+.btn-neutral:hover {
+  color: #000000;
+  border-color: #ffffff;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(30, 31, 57, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08), 0 0 0 0 rgba(255, 255, 255, 0.5);
+}
+
+.btn-neutral.focus {
+  box-shadow: 0 4px 6px rgba(30, 31, 57, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08), 0 0 0 0 rgba(255, 255, 255, 0.5);
+}
+
+div.required > .form-label:not(span):after {
+  content: " *";
+  color: #ef3232;
+  font-weight: bold;
+}
+
+td.required:after {
+  content: " *";
+  color: #ef3232;
+  font-weight: bold;
+}
+
+.role-list {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.custom-control {
+  min-height: 1.5rem;
+}
+
+label.required:after {
+  content: " *";
+  color: #e73d4a
+}
+
+[data-toggle='buttons']:not(.btn-group-colors) > .btn.btn-success:not(.active),
+[data-toggle='buttons']:not(.btn-group-colors) > .btn.btn-danger:not(.active) {
+  background-color: #e5e5e5 !important;
+  color: #191919 !important;
+  border-color: #e5e5e5 !important;
+}
+
+.check-list-wrapper > div:hover {
+  background-color: #e9ecef;
+}
+
+.check-list-wrapper div.item:hover > span.cursor-pointer.trash {
+  display: inline;
+}
+
+.check-list-wrapper div.item > span.cursor-pointer.trash {
+  display: none;
+}
